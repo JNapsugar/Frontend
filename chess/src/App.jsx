@@ -1,4 +1,6 @@
 import {ChessList} from './ChessList'
+import {ChessSingle} from './ChessSingle'
+import {ChessCreate} from './ChessCreate'
 import { BrowserRouter as Router, NavLink, Routes, Route} from 'react-router-dom';
 import './App.css';
 
@@ -12,7 +14,7 @@ export const App = () => {
               <NavLink className="nav-link" to="/">Chess</NavLink>
             </li>
             <li className='nav-item'>
-              <NavLink className="nav-link" to="/">Almenü 1</NavLink>
+              <NavLink className="nav-link" to="/create-chess">Új sakkozó</NavLink>
             </li>
             <li className='nav-item'>
               <NavLink className="nav-link" to="/">Almenü 2</NavLink>
@@ -21,7 +23,9 @@ export const App = () => {
         </div>
       </nav>
       <Routes>
+        <Route path='/chess/:chessId' element={<ChessSingle />} />
         <Route path='/' element={<ChessList />} />
+        <Route path='/create-chess' element={<ChessCreate />} />
       </Routes>
     </Router>
   );
