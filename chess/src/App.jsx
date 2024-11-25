@@ -1,8 +1,11 @@
 import {ChessList} from './ChessList'
 import {ChessSingle} from './ChessSingle'
 import {ChessCreate} from './ChessCreate'
+import { ChessDel } from './ChessDel';
+import { ChessMod } from './ChessMod';
 import { BrowserRouter as Router, NavLink, Routes, Route} from 'react-router-dom';
 import './App.css';
+
 
 export const App = () => {
   return (
@@ -26,6 +29,8 @@ export const App = () => {
         <Route path='/chess/:chessId' element={<ChessSingle />} />
         <Route path='/' element={<ChessList />} />
         <Route path='/create-chess' element={<ChessCreate />} />
+        <Route path='/del-chess/:chessId' element={<ChessDel/>} />
+        <Route path='/mod-chess/:chessId' element={<ChessMod/>} />
       </Routes>
     </Router>
   );

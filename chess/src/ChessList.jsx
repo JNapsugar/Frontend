@@ -32,9 +32,14 @@ export const ChessList = () => {
                                     <Link key={chess.id} to={`/chess/`+ chess.id}>
                                         <img src={chess.image_url ? chess.image_url : "https://via.placeholder.com/400x800"}
                                             alt={chess.name}
-                                            className="img-fluid" style={{width:"250px"}}
+                                            className="img-fluid" style={{width:"200px"}}
                                         />
                                     </Link>
+                                </div>
+                                <div>
+                                    <Link to={"/chess/" + chess.id}><i className="bi bi-text-paragraph fs-3"></i></Link>&nbsp;&nbsp;&nbsp;
+                                    <Link to={"/mod-chess/" + chess.id}><i className="bi bi-pencil-square fs-3"></i></Link>
+                                    <Link to={"/del-chess/" + chess.id}><i className="bi bi-trash2 fs-3"></i></Link>
                                 </div>
                             </div>
                         </div>
