@@ -3,7 +3,7 @@ import {ChessSingle} from './ChessSingle'
 import {ChessCreate} from './ChessCreate'
 import { ChessDel } from './ChessDel';
 import { ChessMod } from './ChessMod';
-import { BrowserRouter as Router, NavLink, Routes, Route} from 'react-router-dom';
+import { HashRouter as Router, NavLink, Routes, Route} from 'react-router-dom';
 import './App.css';
 
 
